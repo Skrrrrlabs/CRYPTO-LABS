@@ -27,15 +27,11 @@ const Home = () => {
 const cardStyle = {
   border: '1px solid #eee',
   borderRadius: '12px',
-  width: '300px', 
-  padding: '20px', 
+  width: '250px',
+  padding: '30px',
   boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
   backgroundColor: '#fff',
   textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between', 
-  height: '350px',
 };
 
 const binanceBtn = {
@@ -58,10 +54,9 @@ const okxBtn = {
   borderRadius: '5px',
 };
 
-// 이미지 스타일링 (고정 비율로 맞추기)
 const logoStyle = (color) => ({
-  width: '160px', 
-  height: 'auto', // 비율 유지
+  width: '160px',  // 이미지 너비를 고정
+  height: 'auto',  // 자동으로 높이 맞추기
   maxHeight: '160px', // 최대 높이 설정
   marginBottom: '25px',
   display: 'block',
@@ -71,3 +66,4 @@ const logoStyle = (color) => ({
 });
 
 export default Home;
+
