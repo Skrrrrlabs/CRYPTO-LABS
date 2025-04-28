@@ -7,7 +7,7 @@ const Home = () => {
       <div style={cardWrapper}>
         {cards.map((card, index) => (
           <div key={index} style={cardStyle}>
-            <img src={card.img} alt={card.alt} style={logoStyle} />
+            <img src={card.img} alt={card.alt} style={card.alt === 'OKX' ? logoStyleSmall : logoStyle} />
             <p style={textStyle}>{card.text}</p>
             <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
               가입하기
@@ -46,14 +46,25 @@ const cardStyle = {
   borderRadius: '16px',
   boxShadow: '0 6px 20px rgba(0,0,0,0.08)',
   width: '260px',
+  height: '360px',
   padding: '20px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  alignItems: 'center',
   transition: 'transform 0.3s',
 };
 
 const logoStyle = {
   width: '120px',
   height: 'auto',
-  margin: '0 auto 20px',
+  margin: '20px 0 10px',
+};
+
+const logoStyleSmall = {
+  width: '100px',
+  height: 'auto',
+  margin: '30px 0 10px',
 };
 
 const textStyle = {
@@ -65,7 +76,9 @@ const textStyle = {
 
 const buttonCommon = {
   display: 'inline-block',
-  padding: '10px 20px',
+  width: '120px',
+  height: '40px',
+  lineHeight: '40px',
   fontWeight: 'bold',
   textDecoration: 'none',
   borderRadius: '8px',
