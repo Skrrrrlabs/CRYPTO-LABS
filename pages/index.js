@@ -27,7 +27,7 @@ const Home = () => {
 const cardStyle = {
   border: '1px solid #eee',
   borderRadius: '12px',
-  width: '200px',
+  width: '250px',
   padding: '30px',
   boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
   backgroundColor: '#fff',
@@ -55,7 +55,7 @@ const okxBtn = {
 };
 
 const logoStyle = (color) => ({
-  width: '180px',
+  width: '160px', // 이미지 크기를 동일하게 맞춤
   height: 'auto',
   marginBottom: '25px',
   display: 'block',
@@ -64,10 +64,5 @@ const logoStyle = (color) => ({
   borderColor: color,
 });
 
-const textStyle = {
-  fontSize: '18px',
-  marginBottom: '20px',
-  lineHeight: '1.4',
-};
-
 export default Home;
+
