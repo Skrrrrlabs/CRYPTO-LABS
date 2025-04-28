@@ -46,32 +46,32 @@ const cardStyle = {
   borderRadius: '16px',
   boxShadow: '0 6px 20px rgba(0,0,0,0.08)',
   width: '260px',
-  height: '360px',
+  height: '320px',
   padding: '20px',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between',
+  justifyContent: 'space-around',
   alignItems: 'center',
   transition: 'transform 0.3s',
 };
 
 const logoStyle = {
-  width: '120px',
+  width: '100px',
   height: 'auto',
-  margin: '20px 0 10px',
+  marginBottom: '10px',
 };
 
 const logoStyleSmall = {
-  width: '100px',
+  width: '90px',
   height: 'auto',
-  margin: '30px 0 10px',
+  marginBottom: '10px',
 };
 
 const textStyle = {
-  fontSize: '15px',
+  fontSize: '14px',
   color: '#555',
-  marginBottom: '20px',
-  lineHeight: '1.5',
+  marginBottom: '10px',
+  lineHeight: '1.4',
 };
 
 const buttonCommon = {
