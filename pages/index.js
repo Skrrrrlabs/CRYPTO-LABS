@@ -7,7 +7,14 @@ const Home = () => {
       <div style={cardWrapper}>
         {cards.map((card, index) => (
           <div key={index} style={cardStyle}>
-            <img src={card.img} alt={card.alt} style={card.alt === 'OKX' ? logoStyleSmall : logoStyle} />
+            {card.alt === 'OKX' ? (
+              <>
+                <img src={card.img} alt={card.alt} style={logoStyleSmall} />
+                <br />
+              </>
+            ) : (
+              <img src={card.img} alt={card.alt} style={logoStyle} />
+            )}
             <p style={textStyle}>{card.text}</p>
             <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
               가입하기
