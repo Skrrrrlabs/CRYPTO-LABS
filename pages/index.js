@@ -21,7 +21,7 @@ const Home = () => {
 
         {/* Bitget Card */}
         <div style={cardStyle}>
-          <img src="/bitget.jpg" alt="Bitget" style={logoStyle('#1c72c6')} />
+          <img src="/bitget.png" alt="Bitget" style={logoStyle('#1c72c6')} />
           <p style={textStyle}>비트겟 평생 수수료 할인 + 20% 페이백!</p>
           <a href="https://www.bitget.com/register?ref=SKRRRR" target="_blank" rel="noopener noreferrer" style={okxBtn}>가입하기</a>
         </div>
