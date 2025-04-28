@@ -2,43 +2,84 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div style={wrapperStyle}>
-      <h1 style={titleStyle}>🚀 CRYPTO LABS 공식 레퍼럴 🚀</h1>
-      <div style={cardWrapper}>
-        {cards.map((card, index) => (
-          <div key={index} style={cardStyle}>
-            {card.alt === 'OKX' ? (
-              <>
-                <img src={card.img} alt={card.alt} style={logoStyleSmall} />
-                <br />
-              </>
-            ) : (
-              <img src={card.img} alt={card.alt} style={logoStyle} />
-            )}
-            <p style={textStyle}>{card.text}</p>
-            <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
-              가입하기
-            </a>
-          </div>
-        ))}
+    <div style={backgroundStyle}>
+      <nav style={navStyle}>
+        <div style={navLeft}>CRYPTO LABS</div>
+        <div style={navRight}>
+          <a href="#home" style={navLink}>홈</a>
+          <a href="#referral" style={navLink}>레퍼럴 변경</a>
+          <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={navLink}>문의하기</a>
+        </div>
+      </nav>
+      <div style={wrapperStyle}>
+        <h1 style={titleStyle}>🚀 CRYPTO LABS 공식 레퍼럴 🚀</h1>
+        <div style={cardWrapper}>
+          {cards.map((card, index) => (
+            <div key={index} style={cardStyle}>
+              {card.alt === 'OKX' ? (
+                <>
+                  <img src={card.img} alt={card.alt} style={logoStyleSmall} />
+                  <br />
+                </>
+              ) : (
+                <img src={card.img} alt={card.alt} style={logoStyle} />
+              )}
+              <p style={textStyle}>{card.text}</p>
+              <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
+                가입하기
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 // 스타일
+const backgroundStyle = {
+  backgroundColor: '#0e1628',
+  backgroundImage: 'url(/blockchain-pattern.png)',
+  backgroundRepeat: 'repeat',
+  backgroundSize: 'cover',
+  minHeight: '100vh',
+};
+
+const navStyle = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: '20px',
+  color: '#f1f1f1',
+  backgroundColor: 'rgba(0,0,0,0.6)',
+};
+
+const navLeft = {
+  fontWeight: 'bold',
+  fontSize: '20px',
+};
+
+const navRight = {
+  display: 'flex',
+  gap: '20px',
+};
+
+const navLink = {
+  color: '#f1f1f1',
+  textDecoration: 'none',
+  fontSize: '16px',
+};
+
 const wrapperStyle = {
   fontFamily: 'Poppins, Noto Sans KR, sans-serif',
   textAlign: 'center',
   padding: '60px 20px',
-  backgroundColor: '#f9fafb',
-  minHeight: '100vh',
 };
 
 const titleStyle = {
   fontSize: '32px',
   marginBottom: '40px',
-  color: '#333',
+  color: '#f1f1f1',
 };
 
 const cardWrapper = {
@@ -49,11 +90,11 @@ const cardWrapper = {
 };
 
 const cardStyle = {
-  backgroundColor: '#fff',
+  backgroundColor: '#ffffff',
   borderRadius: '16px',
-  boxShadow: '0 6px 20px rgba(0,0,0,0.08)',
+  boxShadow: '0 6px 20px rgba(0,0,0,0.2)',
   width: '260px',
-  height: '320px',
+  height: '360px',
   padding: '20px',
   display: 'flex',
   flexDirection: 'column',
@@ -64,19 +105,21 @@ const cardStyle = {
 
 const logoStyle = {
   width: '100px',
-  height: 'auto',
+  height: '160px',
+  objectFit: 'contain',
   marginBottom: '10px',
 };
 
 const logoStyleSmall = {
   width: '90px',
-  height: 'auto',
+  height: '160px',
+  objectFit: 'contain',
   marginBottom: '10px',
 };
 
 const textStyle = {
   fontSize: '14px',
-  color: '#555',
+  color: '#333',
   marginBottom: '10px',
   lineHeight: '1.4',
 };
@@ -100,8 +143,8 @@ const cards = [
     link: 'https://accounts.binance.com/register?ref=V5EBF1SH',
     buttonStyle: {
       ...buttonCommon,
-      backgroundColor: '#F0B90B',
-      color: '#000',
+      backgroundColor: '#0066FF',
+      color: '#fff',
     },
   },
   {
