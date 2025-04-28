@@ -13,7 +13,7 @@ const Home = () => {
         </div>
 
         {/* OKX Card */}
-        <div style={cardStyle}>
+        <div style={{ ...cardStyle, marginTop: '50px' }}>
           <img src="/okx.png" alt="OKX" style={logoStyle('#000')} />
           <p>OKX 평생 수수료 할인 + 20% 페이백!</p>
           <a href="https://www.okx.com/join/SKRRRR" target="_blank" rel="noopener noreferrer" style={okxBtn}>가입하기</a>
