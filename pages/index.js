@@ -77,7 +77,7 @@ const logoStyle = (color) => ({
 });
 
 const textStyle = {
-  fontSize: '16px',  // 폰트 크기를 한 치수 내려서 글씨가 두번째 줄로 넘어가지 않게 함
+  fontSize: '14px',  // 폰트 크기를 한 치수 내려서 글씨가 두번째 줄로 넘어가지 않게 함
   lineHeight: '1.4',  // 줄 간격 조금 더 넓힘
 };
 
