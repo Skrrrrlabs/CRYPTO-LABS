@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', textAlign: 'center', padding: '50px' }}>
       <h1>🚀 CRYPTO LABS 공식 레퍼럴 🚀</h1>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginTop: '50px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '40px' }}>
         {/* Binance Card */}
         <div style={cardStyle}>
           <img src="/binance.png" alt="Binance" style={logoStyle('#F0B90B')} />
@@ -34,9 +34,9 @@ const Home = () => {
 const cardStyle = {
   border: '1px solid #eee',
   borderRadius: '12px',
-  width: '250px',
-  height: '280px', // 카드 높이 줄임
-  padding: '20px',
+  width: '230px', // 카드 너비 조정
+  height: '260px', // 카드 높이 줄임
+  padding: '15px', // 내부 여백 줄임
   boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
   backgroundColor: '#fff',
   textAlign: 'center',
@@ -47,8 +47,8 @@ const cardStyle = {
 
 const binanceBtn = {
   display: 'inline-block',
-  marginTop: '20px',
-  padding: '10px 20px',
+  marginTop: '15px', // 버튼의 마진 줄임
+  padding: '8px 15px', // 버튼 크기 줄임
   backgroundColor: '#F0B90B',
   color: '#000',
   textDecoration: 'none',
@@ -57,8 +57,8 @@ const binanceBtn = {
 
 const okxBtn = {
   display: 'inline-block',
-  marginTop: '20px',
-  padding: '10px 20px',
+  marginTop: '15px', // 버튼의 마진 줄임
+  padding: '8px 15px', // 버튼 크기 줄임
   backgroundColor: '#000',
   color: '#fff',
   textDecoration: 'none',
@@ -66,10 +66,10 @@ const okxBtn = {
 };
 
 const logoStyle = (color) => ({
-  width: '160px',  // 이미지 너비를 고정
+  width: '140px',  // 이미지 너비를 고정
   height: 'auto',  // 자동으로 높이 맞추기
-  maxHeight: '160px', // 최대 높이 설정
-  marginBottom: '25px',
+  maxHeight: '140px', // 최대 높이 설정
+  marginBottom: '15px', // 이미지와 텍스트 사이 여백 줄임
   display: 'block',
   marginLeft: 'auto',
   marginRight: 'auto',
@@ -77,8 +77,8 @@ const logoStyle = (color) => ({
 });
 
 const textStyle = {
-  fontSize: '14px',  // 폰트 크기를 한 치수 내려서 글씨가 두번째 줄로 넘어가지 않게 함
-  lineHeight: '1.4',  // 줄 간격 조금 더 넓힘
+  fontSize: '14px',  // 폰트 크기 줄여서 글씨가 두번째 줄로 넘어가지 않게 함
+  lineHeight: '1.3',  // 줄 간격 조금 더 좁힘
 };
 
 export default Home;
