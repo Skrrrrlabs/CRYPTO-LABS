@@ -16,6 +16,7 @@
     h1 {
       font-size: 2em;
       margin-bottom: 20px;
+      font-weight: bold;
     }
     .container {
       display: flex;
@@ -25,7 +26,7 @@
     }
     .card {
       width: 220px;
-      height: 360px;
+      height: 380px;
       border: 1px solid #eee;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -38,21 +39,28 @@
       background: #fff;
     }
     .card img {
-      width: 100px;
-      height: auto;
+      height: 100px;
+      width: auto;
       margin-top: 10px;
     }
     .description {
       font-weight: bold;
       font-size: 14px;
+      margin-top: 10px;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
     .btn {
-      padding: 10px 0;
+      padding: 12px 0;
       width: 80%;
       border: none;
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
+      font-size: 16px;
     }
     .okx { background: black; color: white; }
     .binance { background: #f0b90b; color: black; }
@@ -74,4 +82,3 @@
   </div>
 </body>
 </html>
-
