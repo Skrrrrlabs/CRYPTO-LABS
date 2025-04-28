@@ -39,13 +39,13 @@
       background: #fff;
     }
     .card img {
-      height: 100px;
+      height: 120px;
       width: auto;
       margin-top: 10px;
     }
     .description {
       font-weight: bold;
-      font-size: 14px;
+      font-size: 16px;
       margin-top: 10px;
       flex-grow: 1;
       display: flex;
