@@ -14,7 +14,7 @@ const Home = () => {
 
         {/* OKX Card */}
         <div style={cardStyle}>
-          <img src="/okx.png" alt="OKX" style={{ ...logoStyle('#000'), width: '160px' }} />
+          <img src="/okx.png" alt="OKX" style={logoStyle('#000')} />
           <p>OKX 평생 수수료 할인 + 20% 페이백!</p>
           <a href="https://www.okx.com/join/SKRRRR" target="_blank" rel="noopener noreferrer" style={okxBtn}>가입하기</a>
         </div>
@@ -27,15 +27,15 @@ const Home = () => {
 const cardStyle = {
   border: '1px solid #eee',
   borderRadius: '12px',
-  width: '300px', // 카드 너비를 균일하게 설정
+  width: '300px', 
   padding: '20px', 
   boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
   backgroundColor: '#fff',
   textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between', // 카드 내 요소들이 균등하게 배치되도록
-  height: '350px', // 카드 높이 고정
+  justifyContent: 'space-between', 
+  height: '350px',
 };
 
 const binanceBtn = {
@@ -58,9 +58,11 @@ const okxBtn = {
   borderRadius: '5px',
 };
 
+// 이미지 스타일링 (고정 비율로 맞추기)
 const logoStyle = (color) => ({
-  width: '160px', // 동일한 너비로 이미지를 맞춤
-  height: '160px', // 동일한 높이로 설정
+  width: '160px', 
+  height: 'auto', // 비율 유지
+  maxHeight: '160px', // 최대 높이 설정
   marginBottom: '25px',
   display: 'block',
   marginLeft: 'auto',
@@ -69,4 +71,3 @@ const logoStyle = (color) => ({
 });
 
 export default Home;
-
