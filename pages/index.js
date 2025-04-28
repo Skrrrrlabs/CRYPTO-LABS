@@ -54,9 +54,10 @@ const okxBtn = {
   borderRadius: '5px',
 };
 
+// 로고 스타일 조정
 const logoStyle = (color) => ({
-  width: '160px',  // 이미지 너비를 고정
-  height: 'auto',  // 자동으로 높이 맞추기
+  width: '160px',  // 이미지 너비 고정
+  height: 'auto',  // 높이는 자동으로 조정
   maxHeight: '160px', // 최대 높이 설정
   marginBottom: '25px',
   display: 'block',
@@ -66,4 +67,3 @@ const logoStyle = (color) => ({
 });
 
 export default Home;
-
