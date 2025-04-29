@@ -12,10 +12,10 @@ const Home = () => {
           <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={navLink}>문의하기</a>
         </div>
       </nav>
-      <div style={contentWrapper}>
+      <div style={contentWrapper} className="contentWrapper">
         <div style={mainContent}>
           <h1 style={titleStyle}>🔥 SKRRRR x CRYPTO LABS 공식 레퍼럴 🔥</h1>
-          <div style={cardWrapper}>
+          <div style={cardWrapper} className="cardWrapper">
             {cards.map((card, index) => (
               <div key={index} style={cardStyle}>
                 <div style={imageContainerStyle}>
@@ -35,13 +35,22 @@ const Home = () => {
       </div>
       <style>
         {`
+          .contentWrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+          }
+
           @media (max-width: 768px) {
             .cardWrapper {
               flex-direction: column;
               align-items: center;
             }
             .footer {
-              position: static;
+              position: relative;
               margin-top: 30px;
               padding-bottom: 20px;
               color: #cccccc;
@@ -106,22 +115,11 @@ const navLink = {
   fontSize: '16px',
 };
 
-const contentWrapper = {
-  position: 'relative',
-  zIndex: 2,
-  flex: 1,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
-
 const mainContent = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'flex-start',
-  minHeight: 'calc(100vh - 160px)',
   paddingTop: '8vh',
 };
 
@@ -197,9 +195,6 @@ const buttonCommon = {
 };
 
 const footerStyle = {
-  position: 'absolute',
-  bottom: '5vh',
-  width: '100%',
   textAlign: 'center',
   color: '#cccccc',
   fontSize: '14px',
