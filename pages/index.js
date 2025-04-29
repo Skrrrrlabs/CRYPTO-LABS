@@ -28,6 +28,7 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <footer style={footerStyle}>© 2025 SKRRRR. All rights reserved.</footer>
       </div>
     </div>
   );
@@ -42,6 +43,8 @@ const backgroundWrapper = {
   backgroundSize: 'cover',
   backgroundPosition: 'center left',
   overflow: 'hidden',
+  display: 'flex',
+  flexDirection: 'column',
 };
 
 const backgroundOverlay = {
@@ -87,7 +90,12 @@ const wrapperStyle = {
   zIndex: 2,
   fontFamily: 'Poppins, Noto Sans KR, sans-serif',
   textAlign: 'center',
-  padding: '60px 20px',
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '40px 20px 20px',
 };
 
 const titleStyle = {
@@ -102,6 +110,7 @@ const cardWrapper = {
   justifyContent: 'center',
   gap: '30px',
   flexWrap: 'wrap',
+  marginBottom: '30px',
 };
 
 const cardStyle = {
@@ -114,8 +123,8 @@ const cardStyle = {
   flexDirection: 'column',
   justifyContent: 'space-between',
   alignItems: 'center',
-  transition: 'transform 0.3s',
   padding: '20px',
+  transition: 'transform 0.3s ease-in-out',
 };
 
 const imageContainerStyle = {
@@ -153,7 +162,13 @@ const buttonCommon = {
   fontWeight: 'bold',
   textDecoration: 'none',
   borderRadius: '8px',
-  transition: 'transform 0.3s',
+  transition: 'all 0.3s ease',
+};
+
+const footerStyle = {
+  color: '#aaa',
+  fontSize: '14px',
+  marginTop: 'auto',
 };
 
 const cards = [
@@ -164,8 +179,8 @@ const cards = [
     link: 'https://accounts.binance.com/register?ref=V5EBF1SH',
     buttonStyle: {
       ...buttonCommon,
-      backgroundColor: '#0066FF',
-      color: '#fff',
+      backgroundColor: '#F0B90B',
+      color: '#000',
     },
   },
   {
@@ -193,4 +208,3 @@ const cards = [
 ];
 
 export default Home;
-
