@@ -7,27 +7,23 @@ const Home = () => {
         <div style={navLeft}>CRYPTO LABS</div>
         <div style={navRight}>
           <a href="#home" style={navLink}>홈</a>
-          <a href="#referral" style={navLink}>레퍼럴 변경</a>
           <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={navLink}>문의하기</a>
         </div>
       </nav>
       <div style={wrapperStyle}>
-        <h1 style={titleStyle}>🚀 CRYPTO LABS 공식 레퍼럴 🚀</h1>
+        <h1 style={titleStyle}>🚀 SKRRRR X CRYPTO LABS 공식 레퍼럴 🚀</h1>
         <div style={cardWrapper}>
           {cards.map((card, index) => (
             <div key={index} style={cardStyle}>
-              {card.alt === 'OKX' ? (
-                <>
-                  <img src={card.img} alt={card.alt} style={logoStyleSmall} />
-                  <br />
-                </>
-              ) : (
+              <div style={imageContainerStyle}>
                 <img src={card.img} alt={card.alt} style={logoStyle} />
-              )}
-              <p style={textStyle}>{card.text}</p>
-              <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
-                가입하기
-              </a>
+              </div>
+              <div style={contentContainerStyle}>
+                <p style={textStyle}>{card.text}</p>
+                <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
+                  가입하기
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -95,26 +91,31 @@ const cardStyle = {
   boxShadow: '0 6px 20px rgba(0,0,0,0.2)',
   width: '260px',
   height: '360px',
-  padding: '20px',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-around',
+  justifyContent: 'space-between',
   alignItems: 'center',
   transition: 'transform 0.3s',
+  padding: '20px',
+};
+
+const imageContainerStyle = {
+  height: '160px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
+const contentContainerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
 };
 
 const logoStyle = {
   width: '100px',
-  height: '160px',
+  height: 'auto',
   objectFit: 'contain',
-  marginBottom: '10px',
-};
-
-const logoStyleSmall = {
-  width: '90px',
-  height: '160px',
-  objectFit: 'contain',
-  marginBottom: '10px',
 };
 
 const textStyle = {
@@ -172,3 +173,4 @@ const cards = [
 ];
 
 export default Home;
+
