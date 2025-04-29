@@ -90,6 +90,8 @@ const styles = {
     fontFamily: '"SF Pro Display", "Helvetica Neue", sans-serif',
     fontWeight: 'bold',
     fontSize: '16px',
+    whiteSpace: 'nowrap',
+    flexShrink: 0,
   },
   menuContainer: {
     display: 'flex',
@@ -100,6 +102,8 @@ const styles = {
     textDecoration: 'none',
     fontSize: '14px',
     fontFamily: '"SF Pro Display", "Helvetica Neue", sans-serif',
+    whiteSpace: 'nowrap',
+    flexShrink: 0,
   },
   mainContainer: {
     marginTop: '100px',
@@ -180,3 +184,4 @@ const styles = {
 };
 
 export default Home;
+
