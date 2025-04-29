@@ -101,6 +101,9 @@ const mainContent = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: 'calc(100vh - 160px)', // 네비바 + 푸터 높이 빼고 중앙정렬
+  padding: '20px',
 };
 
 const titleStyle = {
@@ -122,7 +125,7 @@ const cardStyle = {
   borderRadius: '16px',
   boxShadow: '0 6px 20px rgba(0,0,0,0.2)',
   width: '260px',
-  height: '360px',
+  height: '340px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
@@ -132,7 +135,7 @@ const cardStyle = {
 };
 
 const imageContainerStyle = {
-  height: '160px',
+  height: '140px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -156,14 +159,17 @@ const textStyle = {
   marginBottom: '10px',
   lineHeight: '1.4',
   fontWeight: 'bold',
+  textAlign: 'center',
 };
 
 const buttonCommon = {
   display: 'inline-block',
-  width: '120px',
-  height: '40px',
-  lineHeight: '40px',
+  width: '140px',
+  height: '45px',
+  lineHeight: '45px',
+  fontSize: '16px',
   fontWeight: 'bold',
+  textAlign: 'center',
   textDecoration: 'none',
   borderRadius: '8px',
   transition: 'all 0.3s ease',
