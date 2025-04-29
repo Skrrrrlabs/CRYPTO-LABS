@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div style={backgroundWrapper}>
-      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
       <div style={backgroundOverlay}></div>
       <nav style={navStyle}>
         <div style={navLeft}>CRYPTO LABS</div>
@@ -109,11 +109,11 @@ const mainContent = {
 };
 
 const titleStyle = {
-  fontFamily: 'Great Vibes, cursive',
-  fontSize: '40px',
+  fontFamily: 'Roboto, sans-serif',
+  fontSize: '36px',
   marginBottom: '40px',
   color: '#f1f1f1',
-  fontWeight: 'bold',
+  fontWeight: '700',
   textAlign: 'center',
 };
 
