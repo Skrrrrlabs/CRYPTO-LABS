@@ -11,22 +11,24 @@ const Home = () => {
           <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={navLink}>문의하기</a>
         </div>
       </nav>
-      <div style={wrapperStyle}>
-        <h1 style={titleStyle}>🚀 SKRRRR X CRYPTO LABS 공식 레퍼럴 🚀</h1>
-        <div style={cardWrapper}>
-          {cards.map((card, index) => (
-            <div key={index} style={cardStyle}>
-              <div style={imageContainerStyle}>
-                <img src={card.img} alt={card.alt} style={logoStyle} />
+      <div style={contentWrapper}>
+        <div style={mainContent}>
+          <h1 style={titleStyle}>🚀 SKRRRR X CRYPTO LABS 공식 레퍼럴 🚀</h1>
+          <div style={cardWrapper}>
+            {cards.map((card, index) => (
+              <div key={index} style={cardStyle}>
+                <div style={imageContainerStyle}>
+                  <img src={card.img} alt={card.alt} style={logoStyle} />
+                </div>
+                <div style={contentContainerStyle}>
+                  <p style={textStyle}>{card.text}</p>
+                  <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
+                    가입하기
+                  </a>
+                </div>
               </div>
-              <div style={contentContainerStyle}>
-                <p style={textStyle}>{card.text}</p>
-                <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
-                  가입하기
-                </a>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <footer style={footerStyle}>© 2025 SKRRRR. All rights reserved.</footer>
       </div>
@@ -85,17 +87,20 @@ const navLink = {
   fontSize: '16px',
 };
 
-const wrapperStyle = {
+const contentWrapper = {
   position: 'relative',
   zIndex: 2,
-  fontFamily: 'Poppins, Noto Sans KR, sans-serif',
-  textAlign: 'center',
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '40px 20px 20px',
+};
+
+const mainContent = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
 };
 
 const titleStyle = {
@@ -110,7 +115,6 @@ const cardWrapper = {
   justifyContent: 'center',
   gap: '30px',
   flexWrap: 'wrap',
-  marginBottom: '30px',
 };
 
 const cardStyle = {
@@ -168,7 +172,7 @@ const buttonCommon = {
 const footerStyle = {
   color: '#aaa',
   fontSize: '14px',
-  marginTop: 'auto',
+  marginTop: '30px',
 };
 
 const cards = [
