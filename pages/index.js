@@ -31,7 +31,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <footer style={footerStyle}>© 2025 SKRRRR. All rights reserved.</footer>
+        <footer style={footerStyle} className="footer">© 2025 SKRRRR. All rights reserved.</footer>
       </div>
       <style>
         {`
@@ -40,18 +40,13 @@ const Home = () => {
               flex-direction: column;
               align-items: center;
             }
-            .cardStyle {
-              width: 90%;
-              height: auto;
-              margin-bottom: 20px;
-            }
-            .titleStyle {
-              font-size: 28px;
-            }
-            .buttonCommon {
-              width: 160px;
-              height: 50px;
-              line-height: 50px;
+            .footer {
+              position: static;
+              margin-top: 30px;
+              padding-bottom: 20px;
+              color: #cccccc;
+              font-size: 14px;
+              text-align: center;
             }
           }
         `}
