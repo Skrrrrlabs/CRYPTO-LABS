@@ -104,7 +104,7 @@ const referralCards = [
       ko: '비트겟 평생 수수료 할인 + 20% 페이백!',
       en: 'Bitget Lifetime Fee Discount + 20% Payback!'
     },
-    link: 'https://partner.bitget.com/bg/CU0JUE',
+    link: 'https://partner.bitget.com/bg/5krrrr',
     color: '#1c72c6',
     textColor: '#fff',
   },
