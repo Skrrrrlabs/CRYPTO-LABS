@@ -13,7 +13,7 @@ const Home = () => {
       </nav>
       <div style={contentWrapper}>
         <div style={mainContent}>
-          <h1 style={titleStyle}>🚀 SKRRRR X CRYPTO LABS 공식 레퍼럴 🚀</h1>
+          <h1 style={titleStyle}>🔥 SKRRRR x CRYPTO LABS 공식 레퍼럴 🔥</h1>
           <div style={cardWrapper}>
             {cards.map((card, index) => (
               <div key={index} style={cardStyle}>
@@ -102,8 +102,9 @@ const mainContent = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  minHeight: 'calc(100vh - 160px)', // 네비바 + 푸터 높이 빼고 중앙정렬
+  minHeight: 'calc(100vh - 160px)',
   padding: '20px',
+  marginTop: '-10vh',
 };
 
 const titleStyle = {
@@ -111,6 +112,7 @@ const titleStyle = {
   marginBottom: '40px',
   color: '#f1f1f1',
   fontWeight: 'bold',
+  textAlign: 'center',
 };
 
 const cardWrapper = {
@@ -176,9 +178,10 @@ const buttonCommon = {
 };
 
 const footerStyle = {
-  color: '#aaa',
+  color: '#cccccc',
   fontSize: '14px',
   marginTop: '30px',
+  paddingBottom: '20px',
 };
 
 const cards = [
