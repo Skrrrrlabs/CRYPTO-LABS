@@ -125,10 +125,9 @@ const mainContent = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'flex-start',
   minHeight: 'calc(100vh - 160px)',
-  padding: '20px',
-  marginTop: '-7vh',
+  paddingTop: '8vh',
 };
 
 const titleStyle = {
@@ -246,4 +245,3 @@ const cards = [
 ];
 
 export default Home;
-
