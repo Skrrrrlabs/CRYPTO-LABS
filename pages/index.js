@@ -1,52 +1,67 @@
-// pages/index.js
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRYPTO LABS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    }
+    .bg-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+    }
+  </style>
+</head>
+<body class="text-white">
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-between" style={{ backgroundImage: "url('/background.jpg')" }}>
-      {/* Header */}
-      <header className="flex justify-between items-center p-4 text-white bg-black/50">
-        <div className="text-sm font-bold">CRYPTO LABS</div>
-        <nav className="flex gap-6 text-sm">
-          <a href="#home" className="hover:underline">홈</a>
-          <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" className="hover:underline">문의하기</a>
-        </nav>
-      </header>
-
-      {/* Main Content */}
-      <main id="home" className="flex flex-col items-center text-center mt-8 mb-16">
-        <h1 className="text-2xl md:text-3xl font-extrabold text-white mb-12">
-          <span role="img" aria-label="fire">🔥</span> SKRRRR x CRYPTO LABS 공식 레퍼럴 <span role="img" aria-label="fire">🔥</span>
-        </h1>
-
-        {/* Card Section */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-          {/* Binance Card */}
-          <div className="w-72 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transform transition">
-            <img src="/binance.png" alt="Binance" className="h-16 mb-4" />
-            <p className="text-gray-700 text-sm mb-6">바이낸스 현물/선물 10% 수수료 할인!</p>
-            <a href="#" className="bg-yellow-400 text-black font-bold py-2 px-6 rounded hover:bg-yellow-500 transition">가입하기</a>
-          </div>
-
-          {/* OKX Card */}
-          <div className="w-72 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transform transition">
-            <img src="/okx.png" alt="OKX" className="h-16 mb-4" />
-            <p className="text-gray-700 text-sm mb-6">OKX 평생 수수료 할인 + 20% 페이백!</p>
-            <a href="#" className="bg-black text-white font-bold py-2 px-6 rounded hover:bg-gray-800 transition">가입하기</a>
-          </div>
-
-          {/* Bitget Card */}
-          <div className="w-72 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transform transition">
-            <img src="/bitget.png" alt="Bitget" className="h-16 mb-4" />
-            <p className="text-gray-700 text-sm mb-6">비트겟 평생 수수료 할인 + 20% 페이백!</p>
-            <a href="#" className="bg-blue-500 text-white font-bold py-2 px-6 rounded hover:bg-blue-600 transition">가입하기</a>
-          </div>
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="text-center text-gray-300 text-xs py-4">
-        © 2025 SKRRRR. All rights reserved.
-      </footer>
+  <!-- 상단바 -->
+  <header class="w-full flex justify-between items-center px-6 py-4 bg-black bg-opacity-30 fixed top-0 z-50">
+    <div class="font-bold text-sm">CRYPTO LABS</div>
+    <div class="flex space-x-6 text-sm">
+      <a href="#home" class="hover:underline">홈</a>
+      <a href="https://t.me/masterlabs1O1" target="_blank" class="hover:underline">문의하기</a>
     </div>
-  );
-}
+  </header>
+
+  <!-- 메인 컨텐츠 -->
+  <main class="flex flex-col items-center justify-center min-h-screen pt-32 pb-16">
+    <h1 class="text-2xl font-bold mb-8">🔥 SKRRRR x CRYPTO LABS 공식 레퍼럴 🔥</h1>
+
+    <div class="flex flex-wrap justify-center gap-8">
+
+      <!-- 카드 1 -->
+      <div class="bg-white text-black rounded-2xl shadow-lg p-6 w-72 flex flex-col items-center">
+        <img src="/binance.png" alt="Binance" class="w-24 h-24 mb-4">
+        <p class="text-sm text-center mb-4">바이낸스 현물/선물 10% 수수료 할인!</p>
+        <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-black py-2 px-4 rounded-lg font-bold transition-transform transform hover:scale-105">가입하기</a>
+      </div>
+
+      <!-- 카드 2 -->
+      <div class="bg-white text-black rounded-2xl shadow-lg p-6 w-72 flex flex-col items-center">
+        <img src="/okx.png" alt="OKX" class="w-24 h-24 mb-4">
+        <p class="text-sm text-center mb-4">OKX 평생 수수료 할인 + 20% 페이백!</p>
+        <a href="#" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded-lg font-bold transition-transform transform hover:scale-105">가입하기</a>
+      </div>
+
+      <!-- 카드 3 -->
+      <div class="bg-white text-black rounded-2xl shadow-lg p-6 w-72 flex flex-col items-center">
+        <img src="/bitget.png" alt="Bitget" class="w-24 h-24 mb-4">
+        <p class="text-sm text-center mb-4">비트겟 평생 수수료 할인 + 20% 페이백!</p>
+        <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg font-bold transition-transform transform hover:scale-105">가입하기</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 하단 제작자 표시 -->
+  <footer class="w-full text-center text-xs text-gray-300 py-4 absolute bottom-2">
+    © 2025 SKRRRR. All rights reserved.
+  </footer>
+
+</body>
+</html>
