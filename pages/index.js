@@ -202,10 +202,12 @@ const buttonCommon = {
 };
 
 const footerStyle = {
+  position: 'absolute',
+  bottom: '5vh',
+  width: '100%',
+  textAlign: 'center',
   color: '#cccccc',
   fontSize: '14px',
-  marginTop: '30px',
-  paddingBottom: '20px',
 };
 
 const cards = [
