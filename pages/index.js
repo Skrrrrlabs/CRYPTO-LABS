@@ -2,128 +2,51 @@
 
 export default function Home() {
   return (
-    <div className="container">
-      <main className="main-content">
-        <h1 className="title">
-          <span className="emoji">🔥</span> SKRRRR x CRYPTO LABS 공식 레퍼럴 <span className="emoji">🔥</span>
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-between" style={{ backgroundImage: "url('/background.jpg')" }}>
+      {/* Header */}
+      <header className="flex justify-between items-center p-4 text-white bg-black/50">
+        <div className="text-sm font-bold">CRYPTO LABS</div>
+        <nav className="flex gap-6 text-sm">
+          <a href="#home" className="hover:underline">홈</a>
+          <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" className="hover:underline">문의하기</a>
+        </nav>
+      </header>
+
+      {/* Main Content */}
+      <main id="home" className="flex flex-col items-center text-center mt-8 mb-16">
+        <h1 className="text-2xl md:text-3xl font-extrabold text-white mb-12">
+          <span role="img" aria-label="fire">🔥</span> SKRRRR x CRYPTO LABS 공식 레퍼럴 <span role="img" aria-label="fire">🔥</span>
         </h1>
 
-        <div className="card-container">
-          <div className="card">
-            <img src="/binance-logo.png" alt="Binance" className="logo" />
-            <p className="description"> 바이네스 현무/선무 10% 수수료 할인! </p>
-            <a href="#" className="btn binance"> 가입하기 </a>
+        {/* Card Section */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+          {/* Binance Card */}
+          <div className="w-72 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transform transition">
+            <img src="/binance.png" alt="Binance" className="h-16 mb-4" />
+            <p className="text-gray-700 text-sm mb-6">바이낸스 현물/선물 10% 수수료 할인!</p>
+            <a href="#" className="bg-yellow-400 text-black font-bold py-2 px-6 rounded hover:bg-yellow-500 transition">가입하기</a>
           </div>
 
-          <div className="card">
-            <img src="/okx-logo.png" alt="OKX" className="logo" />
-            <p className="description"> OKX 평상 수수료 할인 + 20% 페이벡! </p>
-            <a href="#" className="btn okx"> 가입하기 </a>
+          {/* OKX Card */}
+          <div className="w-72 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transform transition">
+            <img src="/okx.png" alt="OKX" className="h-16 mb-4" />
+            <p className="text-gray-700 text-sm mb-6">OKX 평생 수수료 할인 + 20% 페이백!</p>
+            <a href="#" className="bg-black text-white font-bold py-2 px-6 rounded hover:bg-gray-800 transition">가입하기</a>
           </div>
 
-          <div className="card">
-            <img src="/bitget-logo.png" alt="Bitget" className="logo" />
-            <p className="description"> 비트겟 평상 수수료 할인 + 20% 페이벡! </p>
-            <a href="#" className="btn bitget"> 가입하기 </a>
+          {/* Bitget Card */}
+          <div className="w-72 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transform transition">
+            <img src="/bitget.png" alt="Bitget" className="h-16 mb-4" />
+            <p className="text-gray-700 text-sm mb-6">비트겟 평생 수수료 할인 + 20% 페이백!</p>
+            <a href="#" className="bg-blue-500 text-white font-bold py-2 px-6 rounded hover:bg-blue-600 transition">가입하기</a>
           </div>
         </div>
-
-        <footer className="footer">
-          © 2025 SKRRRR. All rights reserved.
-        </footer>
       </main>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          background: url('/background.jpg') no-repeat center center/cover;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-        }
-
-        .main-content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-
-        .title {
-          font-size: 24px;
-          font-weight: bold;
-          color: white;
-          margin-bottom: 40px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        .card-container {
-          display: flex;
-          gap: 20px;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .card {
-          background: white;
-          padding: 20px;
-          border-radius: 12px;
-          width: 260px;
-          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .logo {
-          height: 60px;
-          margin-bottom: 20px;
-        }
-
-        .description {
-          font-size: 14px;
-          color: #333;
-          margin-bottom: 20px;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          border-radius: 8px;
-          text-decoration: none;
-          color: white;
-          font-weight: bold;
-        }
-
-        .btn.binance {
-          background: #f0b90b;
-        }
-
-        .btn.okx {
-          background: #000000;
-        }
-
-        .btn.bitget {
-          background: #3081c8;
-        }
-
-        .footer {
-          margin-top: 50px;
-          font-size: 12px;
-          color: white;
-        }
-
-        @media (max-width: 768px) {
-          .card-container {
-            flex-direction: column;
-            gap: 30px;
-          }
-
-          .card {
-            width: 80%;
-          }
-        }
-      `}</style>
+      {/* Footer */}
+      <footer className="text-center text-gray-300 text-xs py-4">
+        © 2025 SKRRRR. All rights reserved.
+      </footer>
     </div>
   );
 }
