@@ -1,0 +1,25 @@
+{
+  "redirects": [
+    {
+      "source": "/binance",
+      "destination": "https://accounts.binance.com/register?ref=V5EBF1SH",
+      "permanent": true
+    },
+    {
+      "source": "/okx",
+      "destination": "https://www.okx.com/join/SKRRRR",
+      "permanent": true
+    },
+    {
+      "source": "/bitget",
+      "destination": "https://www.bitget.com/register?ref=SKRRRR",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.js"
+    }
+  ]
+}
