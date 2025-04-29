@@ -2,7 +2,8 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div style={backgroundStyle}>
+    <div style={backgroundWrapper}>
+      <div style={backgroundOverlay}></div>
       <nav style={navStyle}>
         <div style={navLeft}>CRYPTO LABS</div>
         <div style={navRight}>
@@ -33,15 +34,30 @@ const Home = () => {
 };
 
 // 스타일
-const backgroundStyle = {
-  backgroundColor: '#0e1628',
-  backgroundImage: 'url(/blockchain-pattern.png)',
-  backgroundRepeat: 'repeat',
-  backgroundSize: 'cover',
+const backgroundWrapper = {
+  position: 'relative',
   minHeight: '100vh',
+  backgroundImage: 'url(/background.jpg)',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center left',
+  overflow: 'hidden',
+};
+
+const backgroundOverlay = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(14, 22, 40, 0.7)',
+  backdropFilter: 'blur(2px)',
+  zIndex: 1,
 };
 
 const navStyle = {
+  position: 'relative',
+  zIndex: 2,
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -67,6 +83,8 @@ const navLink = {
 };
 
 const wrapperStyle = {
+  position: 'relative',
+  zIndex: 2,
   fontFamily: 'Poppins, Noto Sans KR, sans-serif',
   textAlign: 'center',
   padding: '60px 20px',
@@ -175,3 +193,4 @@ const cards = [
 ];
 
 export default Home;
+
