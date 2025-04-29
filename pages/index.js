@@ -1,175 +1,84 @@
-// pages/index.js
 import React from 'react';
-import Head from 'next/head';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div style={styles.pageWrapper}>
-      <Head>
-        <title>SKRRRR X CRYPTO LABS 공식 레퍼럴</title>
-        <meta name="description" content="SKRRRR X CRYPTO LABS 레퍼럴 페이지" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
-      {/* 상단 내비게이션 */}
-      <header style={styles.navbar}>
-        <div style={styles.logo}>CRYPTO LABS</div>
-        <nav style={styles.menu}>
-          <a href="#" style={styles.menuLink}>홈</a>
-          <a href="#" style={styles.menuLink}>문의하기</a>
-        </nav>
-      </header>
-
-      {/* 메인 콘텐츠 */}
-      <main style={styles.mainContent}>
-        <h1 style={styles.title}>🚀 SKRRRR X CRYPTO LABS 공식 레퍼럴 🚀</h1>
-        <div style={styles.cardContainer}>
-          {referralCards.map((card, index) => (
-            <div key={index} style={styles.card}>
-              <img src={card.img} alt={card.name} style={styles.logoImg} />
-              <p style={styles.description}>{card.desc}</p>
-              <a
-                href={card.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ ...styles.button, backgroundColor: card.color, color: card.textColor }}
-              >
-                가입하기
-              </a>
-            </div>
-          ))}
+    <div style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', textAlign: 'center', padding: '50px' }}>
+      <h1>🚀 CRYPTO LABS 공식 레퍼럴 🚀</h1>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '40px' }}>
+        {/* Binance Card */}
+        <div style={cardStyle}>
+          <img src="/binance.png" alt="Binance" style={logoStyle('#F0B90B')} />
+          <p style={textStyle}>바이낸스 현물/선물 10% 수수료 할인!</p>
+          <a href="https://accounts.binance.com/register?ref=V5EBF1SH" target="_blank" rel="noopener noreferrer" style={binanceBtn}>가입하기</a>
         </div>
-      </main>
 
-      {/* 하단 푸터 */}
-      <footer style={styles.footer}>
-        © 2025 SKRRRR. All rights reserved.
-      </footer>
+        {/* OKX Card */}
+        <div style={cardStyle}>
+          <img src="/okx.png" alt="OKX" style={logoStyle('#000')} />
+          <p style={textStyle}>OKX 평생 수수료 할인 + 20% 페이백!</p>
+          <a href="https://www.okx.com/join/SKRRRR" target="_blank" rel="noopener noreferrer" style={okxBtn}>가입하기</a>
+        </div>
 
-      {/* 배경 이미지 */}
-      <div style={styles.background} />
+        {/* Bitget Card */}
+        <div style={cardStyle}>
+          <img src="/bitget.png" alt="Bitget" style={logoStyle('#1c72c6')} />
+          <p style={textStyle}>비트겟 평생 수수료 할인 + 20% 페이백!</p>
+          <a href="https://www.bitget.com/register?ref=SKRRRR" target="_blank" rel="noopener noreferrer" style={okxBtn}>가입하기</a>
+        </div>
+      </div>
     </div>
   );
-}
-
-const referralCards = [
-  {
-    name: 'Binance',
-    img: '/binance.png',
-    desc: '바이낸스 현물/선물 10% 수수료 할인!',
-    link: 'https://accounts.binance.com/register?ref=V5EBF1SH',
-    color: '#F0B90B',
-    textColor: '#000',
-  },
-  {
-    name: 'OKX',
-    img: '/okx.png',
-    desc: 'OKX 평생 수수료 할인 + 20% 페이백!',
-    link: 'https://www.okx.com/join/SKRRRR',
-    color: '#000',
-    textColor: '#fff',
-  },
-  {
-    name: 'Bitget',
-    img: '/bitget.png',
-    desc: '비트겟 평생 수수료 할인 + 20% 페이백!',
-    link: 'https://www.bitget.com/register?ref=SKRRRR',
-    color: '#1c72c6',
-    textColor: '#fff',
-  },
-];
-
-const styles = {
-  pageWrapper: {
-    position: 'relative',
-    minHeight: '100vh',
-    overflow: 'hidden',
-    fontFamily: 'Arial, sans-serif',
-    color: '#fff',
-  },
-  background: {
-    backgroundImage: 'url(/background.jpg)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    zIndex: -1,
-    filter: 'blur(4px) brightness(0.6)',
-  },
-  navbar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '20px 40px',
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    position: 'relative',
-    zIndex: 1,
-  },
-  logo: {
-    fontWeight: 'bold',
-    fontSize: '18px',
-  },
-  menu: {
-    display: 'flex',
-    gap: '20px',
-  },
-  menuLink: {
-    color: '#fff',
-    textDecoration: 'none',
-    fontSize: '14px',
-  },
-  mainContent: {
-    textAlign: 'center',
-    padding: '80px 20px 40px',
-  },
-  title: {
-    fontSize: '22px',
-    marginBottom: '40px',
-  },
-  cardContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    gap: '30px',
-  },
-  card: {
-    backgroundColor: '#fff',
-    color: '#000',
-    borderRadius: '12px',
-    padding: '20px',
-    width: '240px',
-    height: '270px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
-  },
-  logoImg: {
-    width: '120px',
-    maxHeight: '120px',
-    objectFit: 'contain',
-    marginBottom: '10px',
-  },
-  description: {
-    fontSize: '14px',
-    textAlign: 'center',
-    margin: '10px 0',
-  },
-  button: {
-    padding: '8px 18px',
-    borderRadius: '6px',
-    fontWeight: 'bold',
-    textDecoration: 'none',
-    transition: 'opacity 0.3s ease',
-  },
-  footer: {
-    textAlign: 'center',
-    fontSize: '12px',
-    color: '#ccc',
-    padding: '30px 10px 10px',
-  },
 };
+
+// 스타일 정의
+const cardStyle = {
+  border: '1px solid #eee',
+  borderRadius: '12px',
+  width: '230px', // 카드 너비 조정
+  height: '260px', // 카드 높이 줄임
+  padding: '15px', // 내부 여백 줄임
+  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+  backgroundColor: '#fff',
+  textAlign: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between', // 이미지와 버튼 사이를 동일하게 배치
+};
+
+const binanceBtn = {
+  display: 'inline-block',
+  marginTop: '15px', // 버튼의 마진 줄임
+  padding: '8px 15px', // 버튼 크기 줄임
+  backgroundColor: '#F0B90B',
+  color: '#000',
+  textDecoration: 'none',
+  borderRadius: '5px',
+};
+
+const okxBtn = {
+  display: 'inline-block',
+  marginTop: '15px', // 버튼의 마진 줄임
+  padding: '8px 15px', // 버튼 크기 줄임
+  backgroundColor: '#000',
+  color: '#fff',
+  textDecoration: 'none',
+  borderRadius: '5px',
+};
+
+const logoStyle = (color) => ({
+  width: '140px',  // 이미지 너비를 고정
+  height: 'auto',  // 자동으로 높이 맞추기
+  maxHeight: '140px', // 최대 높이 설정
+  marginBottom: '15px', // 이미지와 텍스트 사이 여백 줄임
+  display: 'block',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  borderColor: color,
+});
+
+const textStyle = {
+  fontSize: '14px',  // 폰트 크기 줄여서 글씨가 두번째 줄로 넘어가지 않게 함
+  lineHeight: '1.3',  // 줄 간격 조금 더 좁힘
+};
+
+export default Home;
