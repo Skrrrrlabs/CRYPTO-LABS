@@ -76,6 +76,7 @@ const titleStyle = {
   fontSize: '32px',
   marginBottom: '40px',
   color: '#f1f1f1',
+  fontWeight: 'bold',
 };
 
 const cardWrapper = {
@@ -123,6 +124,7 @@ const textStyle = {
   color: '#333',
   marginBottom: '10px',
   lineHeight: '1.4',
+  fontWeight: 'bold',
 };
 
 const buttonCommon = {
@@ -133,7 +135,7 @@ const buttonCommon = {
   fontWeight: 'bold',
   textDecoration: 'none',
   borderRadius: '8px',
-  transition: 'background-color 0.3s',
+  transition: 'transform 0.3s',
 };
 
 const cards = [
@@ -173,4 +175,3 @@ const cards = [
 ];
 
 export default Home;
-
