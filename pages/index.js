@@ -2,238 +2,158 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div style={backgroundWrapper}>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-      <div style={backgroundOverlay}></div>
+    <div style={contentWrapper}>
       <nav style={navStyle}>
-        <div style={navLeft}>CRYPTO LABS</div>
-        <div style={navRight}>
+        <div>CRYPTO LABS</div>
+        <div>
           <a href="#home" style={navLink}>홈</a>
           <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={navLink}>문의하기</a>
         </div>
       </nav>
-      <div style={contentWrapper} className="contentWrapper">
-        <div style={mainContent}>
-          <h1 style={titleStyle}>🔥 SKRRRR x CRYPTO LABS 공식 레퍼럴 🔥</h1>
-          <div style={cardWrapper} className="cardWrapper">
-            {cards.map((card, index) => (
-              <div key={index} style={cardStyle}>
-                <div style={imageContainerStyle}>
-                  <img src={card.img} alt={card.alt} style={logoStyle} />
-                </div>
-                <div style={contentContainerStyle}>
-                  <p style={textStyle}>{card.text}</p>
-                  <a href={card.link} target="_blank" rel="noopener noreferrer" style={card.buttonStyle}>
-                    가입하기
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <footer style={footerStyle} className="footer">© 2025 SKRRRR. All rights reserved.</footer>
-      </div>
-      <style>
-        {`
-          .contentWrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            justify-content: space-between;
-            position: relative;
-            z-index: 2;
-          }
 
-          @media (max-width: 768px) {
-            .cardWrapper {
-              flex-direction: column;
-              align-items: center;
-            }
-            .footer {
-              position: relative;
-              margin-top: 30px;
-              padding-bottom: 20px;
-              color: #cccccc;
-              font-size: 14px;
-              text-align: center;
-            }
-          }
-        `}
-      </style>
+      <div style={headerStyle}>🔥 skrrrr x crypto labs 공식 레퍼럴 🔥</div>
+
+      <div style={cardContainer}>
+        {/* Binance Card */}
+        <div style={cardStyle}>
+          <img src="/binance.png" alt="Binance" style={logoStyle} />
+          <p style={textStyle}>바이낸스 현물/선물 10% 수수료 할인!</p>
+          <a href="https://accounts.binance.com/register?ref=V5EBF1SH" target="_blank" rel="noopener noreferrer" style={binanceBtn}>가입하기</a>
+        </div>
+
+        {/* OKX Card */}
+        <div style={cardStyle}>
+          <img src="/okx.png" alt="OKX" style={logoStyle} />
+          <p style={textStyle}>OKX 평생 수수료 할인 + 20% 페이백!</p>
+          <a href="https://www.okx.com/join/SKRRRR" target="_blank" rel="noopener noreferrer" style={okxBtn}>가입하기</a>
+        </div>
+
+        {/* Bitget Card */}
+        <div style={cardStyle}>
+          <img src="/bitget.png" alt="Bitget" style={logoStyle} />
+          <p style={textStyle}>비트겟 평생 수수료 할인 + 20% 페이백!</p>
+          <a href="https://www.bitget.com/register?ref=SKRRRR" target="_blank" rel="noopener noreferrer" style={bitgetBtn}>가입하기</a>
+        </div>
+      </div>
+
+      <footer style={footerStyle}>
+        © 2025 SKRRRR. All rights reserved.
+      </footer>
     </div>
   );
 };
 
-// 스타일
-const backgroundWrapper = {
-  position: 'relative',
-  minHeight: '100vh',
-  backgroundImage: 'url(/background.jpg)',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center left',
-  overflow: 'hidden',
+// 스타일들
+const contentWrapper = {
   display: 'flex',
   flexDirection: 'column',
-};
-
-const backgroundOverlay = {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
-  backgroundColor: 'rgba(14, 22, 40, 0.7)',
-  backdropFilter: 'blur(2px)',
-  zIndex: 1,
+  minHeight: '100vh',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  backgroundImage: 'url(/background.jpg)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  padding: '12vh 20px 5vh 20px',
 };
 
 const navStyle = {
-  position: 'relative',
-  zIndex: 2,
+  width: '100%',
+  height: '60px',
+  backgroundColor: 'rgba(0,0,0,0.8)',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '20px',
-  color: '#f1f1f1',
-  backgroundColor: 'rgba(0,0,0,0.6)',
-};
-
-const navLeft = {
+  padding: '0 20px',
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  zIndex: 1000,
+  color: '#fff',
   fontWeight: 'bold',
-  fontSize: '20px',
-};
-
-const navRight = {
-  display: 'flex',
-  gap: '20px',
-};
-
-const navLink = {
-  color: '#f1f1f1',
-  textDecoration: 'none',
   fontSize: '16px',
 };
 
-const mainContent = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-  paddingTop: '8vh',
+const navLink = {
+  color: '#fff',
+  textDecoration: 'none',
+  marginLeft: '20px',
 };
 
-const titleStyle = {
-  fontFamily: 'Roboto, sans-serif',
-  fontSize: '36px',
+const headerStyle = {
+  fontSize: '26px',
+  fontWeight: 'bold',
+  color: 'white',
+  marginTop: '80px',
   marginBottom: '40px',
-  color: '#f1f1f1',
-  fontWeight: '700',
   textAlign: 'center',
 };
 
-const cardWrapper = {
+const cardContainer = {
   display: 'flex',
   justifyContent: 'center',
-  gap: '30px',
+  gap: '20px',
   flexWrap: 'wrap',
 };
 
 const cardStyle = {
-  backgroundColor: '#ffffff',
-  borderRadius: '16px',
-  boxShadow: '0 6px 20px rgba(0,0,0,0.2)',
-  width: '260px',
-  height: '340px',
+  width: '250px',
+  height: '320px',
+  backgroundColor: 'white',
+  borderRadius: '12px',
+  padding: '20px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '20px',
-  transition: 'transform 0.3s ease-in-out',
-};
-
-const imageContainerStyle = {
-  height: '140px',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
-
-const contentContainerStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+  boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
 };
 
 const logoStyle = {
-  width: '100px',
+  width: '120px',
   height: 'auto',
-  objectFit: 'contain',
+  marginBottom: '15px',
 };
 
 const textStyle = {
   fontSize: '14px',
   color: '#333',
-  marginBottom: '10px',
-  lineHeight: '1.4',
-  fontWeight: 'bold',
   textAlign: 'center',
+  marginBottom: '10px',
 };
 
-const buttonCommon = {
-  display: 'inline-block',
-  width: '140px',
-  height: '45px',
-  lineHeight: '45px',
-  fontSize: '16px',
-  fontWeight: 'bold',
-  textAlign: 'center',
-  textDecoration: 'none',
+const binanceBtn = {
+  backgroundColor: '#F0B90B',
+  color: 'black',
+  padding: '10px 20px',
   borderRadius: '8px',
-  transition: 'all 0.3s ease',
+  textDecoration: 'none',
+  fontWeight: 'bold',
+};
+
+const okxBtn = {
+  backgroundColor: 'black',
+  color: 'white',
+  padding: '10px 20px',
+  borderRadius: '8px',
+  textDecoration: 'none',
+  fontWeight: 'bold',
+};
+
+const bitgetBtn = {
+  backgroundColor: '#2E8BFF',
+  color: 'white',
+  padding: '10px 20px',
+  borderRadius: '8px',
+  textDecoration: 'none',
+  fontWeight: 'bold',
 };
 
 const footerStyle = {
+  fontSize: '12px',
+  color: 'white',
   textAlign: 'center',
-  color: '#cccccc',
-  fontSize: '14px',
+  marginBottom: '10px',
 };
-
-const cards = [
-  {
-    img: '/binance.png',
-    alt: 'Binance',
-    text: '바이낸스 현물/선물 10% 수수료 할인!',
-    link: 'https://accounts.binance.com/register?ref=V5EBF1SH',
-    buttonStyle: {
-      ...buttonCommon,
-      backgroundColor: '#F0B90B',
-      color: '#000',
-    },
-  },
-  {
-    img: '/okx.png',
-    alt: 'OKX',
-    text: 'OKX 평생 수수료 할인 + 20% 페이백!',
-    link: 'https://www.okx.com/join/SKRRRR',
-    buttonStyle: {
-      ...buttonCommon,
-      backgroundColor: '#000',
-      color: '#fff',
-    },
-  },
-  {
-    img: '/bitget.png',
-    alt: 'Bitget',
-    text: '비트겟 평생 수수료 할인 + 20% 페이백!',
-    link: 'https://www.bitget.com/register?ref=SKRRRR',
-    buttonStyle: {
-      ...buttonCommon,
-      backgroundColor: '#1c72c6',
-      color: '#fff',
-    },
-  },
-];
 
 export default Home;
