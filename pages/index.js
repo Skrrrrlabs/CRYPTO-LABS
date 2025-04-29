@@ -33,6 +33,29 @@ const Home = () => {
         </div>
         <footer style={footerStyle}>© 2025 SKRRRR. All rights reserved.</footer>
       </div>
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .cardWrapper {
+              flex-direction: column;
+              align-items: center;
+            }
+            .cardStyle {
+              width: 90%;
+              height: auto;
+              margin-bottom: 20px;
+            }
+            .titleStyle {
+              font-size: 28px;
+            }
+            .buttonCommon {
+              width: 160px;
+              height: 50px;
+              line-height: 50px;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };
@@ -105,7 +128,7 @@ const mainContent = {
   justifyContent: 'center',
   minHeight: 'calc(100vh - 160px)',
   padding: '20px',
-  marginTop: '-10vh',
+  marginTop: '-7vh',
 };
 
 const titleStyle = {
@@ -223,3 +246,4 @@ const cards = [
 ];
 
 export default Home;
+
