@@ -136,7 +136,7 @@ const styles = {
     width: '100%',
     height: '100%',
     zIndex: -1,
-    filter: 'blur(4px) brightness(0.6)',
+    filter: 'blur(1.5px) brightness(0.75)',
   },
   navbar: {
     display: 'flex',
@@ -224,3 +224,4 @@ const styles = {
     padding: '30px 10px 10px',
   },
 };
+
