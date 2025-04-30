@@ -19,18 +19,27 @@ export default function Home() {
   return (
     <div style={{ ...styles.pageWrapper }}>
       <Head>
-        <title>{t.metaTitle}</title>
-        <meta name="description" content={t.metaDescription} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {/* 기본 SEO */}
+  <title>SKRRRR X CRYPTO LABS 공식 레퍼럴</title>
+  <meta name="description" content="SKRRRR X CRYPTO LABS 레퍼럴 페이지" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* ✅ 미리보기 및 favicon 설정 */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={t.metaTitle} />
-        <meta property="og:description" content={t.metaDescription} />
-        <meta property="og:image" content="https://yourdomain.com/background.png" />
-        <meta property="og:url" content="https://yourdomain.com/" />
-        <link rel="icon" href="/skrrr_labs_favicon.ico" />
-      </Head>
+  {/* Favicon */}
+  <link rel="icon" href="/skrrr_labs_favicon.ico" />
+
+  {/* Open Graph (카카오톡, 페이스북, 디스코드 등) */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SKRRRR X CRYPTO LABS 공식 레퍼럴" />
+  <meta property="og:description" content="SKRRRR X CRYPTO LABS 레퍼럴 페이지" />
+  <meta property="og:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
+  <meta property="og:url" content="https://crypto-labs-zeta.vercel.app/" />
+
+  {/* Twitter card (선택사항이지만 있으면 좋아!) */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SKRRRR X CRYPTO LABS 공식 레퍼럴" />
+  <meta name="twitter:description" content="SKRRRR X CRYPTO LABS 레퍼럴 페이지" />
+  <meta name="twitter:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
+</Head>
 
       <header style={styles.navbar}>
         <div style={styles.logo}>CRYPTO LABS</div>
