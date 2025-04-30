@@ -90,7 +90,7 @@ export default function Home() {
       </main>
 
       <footer style={styles.footer}>
-        © 2025 CRYTOLABS LEADER ALPHA. All rights reserved.
+        © 2025 CRYPTO LABS LEADER ALPHA. All rights reserved.
       </footer>
 
       <div style={{
