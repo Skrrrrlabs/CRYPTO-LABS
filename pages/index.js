@@ -5,6 +5,7 @@ import Head from 'next/head';
 export default function Home() {
   const [lang, setLang] = useState('ko');
   const [isMobile, setIsMobile] = useState(false);
+  const [bgmMuted, setBgmMuted] = useState(true);
 
   useEffect(() => {
     const checkSize = () => setIsMobile(window.innerWidth <= 768);
@@ -13,33 +14,37 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkSize);
   }, []);
 
+  useEffect(() => {
+    const audio = document.getElementById('siteBgm');
+    if (audio) audio.muted = bgmMuted;
+  }, [bgmMuted]);
+
   const t = lang === 'ko' ? TEXT_KO : TEXT_EN;
   const backgroundImage = isMobile ? '/background-mobile.png' : '/background.png';
 
   return (
     <div style={{ ...styles.pageWrapper }}>
       <Head>
-  {/* 기본 SEO */}
-  <title>SKRRRR x CRYPTO LABS 공식 레퍼럴</title>
-  <meta name="description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SKRRRR x CRYPTO LABS 공식 레퍼럴</title>
+        <meta name="description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/skrrr_labs_favicon.ico" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="SKRRRR x CRYPTO LABS 공식 레퍼럴" />
+        <meta property="og:description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
+        <meta property="og:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
+        <meta property="og:url" content="https://crypto-labs-zeta.vercel.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SKRRRR x CRYPTO LABS 공식 레퍼럴" />
+        <meta name="twitter:description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
+        <meta name="twitter:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
+      </Head>
 
-  {/* Favicon */}
-  <link rel="icon" href="/skrrr_labs_favicon.ico" />
+      <audio id="siteBgm" src="/banggooseok_trader_full.mp3" autoPlay loop muted></audio>
 
-  {/* Open Graph (카카오톡, 페이스북, 디스코드 등) */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="SKRRRR x CRYPTO LABS 공식 레퍼럴" />
-  <meta property="og:description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
-  <meta property="og:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
-  <meta property="og:url" content="https://crypto-labs-zeta.vercel.app/" />
-
-  {/* Twitter card (선택사항이지만 있으면 좋아!) */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SKRRRR x CRYPTO LABS 공식 레퍼럴" />
-  <meta name="twitter:description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
-  <meta name="twitter:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
-</Head>
+      <button onClick={() => setBgmMuted(!bgmMuted)} style={{ position: 'fixed', bottom: 20, right: 20, zIndex: 10, backgroundColor: '#000', color: '#fff', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', fontSize: '12px' }}>
+        🎵 BGM {bgmMuted ? '켜기' : '끄기'}
+      </button>
 
       <header style={styles.navbar}>
         <div style={styles.logo}>CRYPTO LABS</div>
@@ -100,6 +105,9 @@ export default function Home() {
     </div>
   );
 }
+
+// 이하 TEXT_KO, TEXT_EN, referralCards, styles는 그대로 유지됨
+
 
 const TEXT_KO = {
   metaTitle: 'SKRRRR x CRYPTO LABS 공식 레퍼럴',
