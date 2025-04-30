@@ -22,9 +22,15 @@ export default function Home() {
         <title>{t.metaTitle}</title>
         <meta name="description" content={t.metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* ✅ 링크 미리보기용 OG 태그 */}
+
+        {/* ✅ 미리보기 및 favicon 설정 */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t.metaTitle} />
+        <meta property="og:description" content={t.metaDescription} />
+        <meta property="og:image" content="https://yourdomain.com/background.png" />
+        <meta property="og:url" content="https://yourdomain.com/" />
         <link rel="icon" href="/skrrr_labs_favicon.ico" />
-        </Head>
+      </Head>
 
       <header style={styles.navbar}>
         <div style={styles.logo}>CRYPTO LABS</div>
@@ -50,10 +56,18 @@ export default function Home() {
                   ...styles.button,
                   backgroundColor: card.color,
                   color: card.textColor,
-                  ...styles.goldHover
+                  ...(card.name === 'Binance' ? styles.goldHover : {}),
+                  ...(card.name === 'OKX' ? styles.okxHover : {}),
+                  ...(card.name === 'Bitget' ? styles.bitgetHover : {})
                 }}
                 onMouseOver={e => {
-                  e.target.style.filter = 'brightness(1.2) drop-shadow(0 0 6px gold)';
+                  if (card.name === 'Binance') {
+                    e.target.style.filter = 'brightness(1.2) drop-shadow(0 0 6px gold)';
+                  } else if (card.name === 'OKX') {
+                    e.target.style.filter = 'brightness(1.15) drop-shadow(0 0 4px black)';
+                  } else if (card.name === 'Bitget') {
+                    e.target.style.filter = 'brightness(1.15) drop-shadow(0 0 4px #1c72c6)';
+                  }
                 }}
                 onMouseOut={e => {
                   e.target.style.filter = 'none';
@@ -78,61 +92,7 @@ export default function Home() {
   );
 }
 
-// 이하 기존 내용 동일 (TEXT_KO, TEXT_EN, referralCards, styles)
-
-const TEXT_KO = {
-  metaTitle: 'SKRRRR X CRYPTO LABS 공식 레퍼럴',
-  metaDescription: 'SKRRRR X CRYPTO LABS 레퍼럴 페이지',
-  home: '홈',
-  contact: '문의하기',
-  mainTitle: '🚀 SKRRRR X CRYPTO LABS 공식 레퍼럴 🚀',
-  joinNow: '가입하기',
-};
-
-const TEXT_EN = {
-  metaTitle: 'SKRRRR X CRYPTO LABS Official Referral',
-  metaDescription: 'SKRRRR X CRYPTO LABS Global Referral Page',
-  home: 'Home',
-  contact: 'Contact',
-  mainTitle: '🚀 SKRRRR X CRYPTO LABS OFFICIAL REFERRAL 🚀',
-  joinNow: 'Join Now',
-};
-
-const referralCards = [
-  {
-    name: 'Binance',
-    img: '/binance.png',
-    desc: {
-      ko: '바이낸스 현물/선물 10% 수수료 할인!',
-      en: 'Binance Spot/Futures 10% Fee Discount!'
-    },
-    link: 'https://accounts.binance.com/register?ref=V5EBF1SH',
-    color: '#F0B90B',
-    textColor: '#000',
-  },
-  {
-    name: 'OKX',
-    img: '/okx.png',
-    desc: {
-      ko: 'OKX 평생 수수료 할인 + 20% 페이백!',
-      en: 'OKX Lifetime Fee Discount + 20% Payback!'
-    },
-    link: 'https://www.okx.com/join/SKRRRR',
-    color: '#000',
-    textColor: '#fff',
-  },
-  {
-    name: 'Bitget',
-    img: '/bitget.png',
-    desc: {
-      ko: '비트겟 평생 수수료 할인 + 20% 페이백!',
-      en: 'Bitget Lifetime Fee Discount + 20% Payback!'
-    },
-    link: 'https://partner.bitget.com/bg/5krrrr',
-    color: '#1c72c6',
-    textColor: '#fff',
-  },
-];
+// 이하 TEXT_KO, TEXT_EN, referralCards는 그대로
 
 const styles = {
   pageWrapper: {
@@ -235,6 +195,12 @@ const styles = {
     cursor: 'pointer',
   },
   goldHover: {
+    transition: 'all 0.3s ease',
+  },
+  okxHover: {
+    transition: 'all 0.3s ease',
+  },
+  bitgetHover: {
     transition: 'all 0.3s ease',
   },
   footer: {
