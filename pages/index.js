@@ -44,7 +44,18 @@ export default function Home() {
                 href={card.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ ...styles.button, backgroundColor: card.color, color: card.textColor }}
+                style={{
+                  ...styles.button,
+                  backgroundColor: card.color,
+                  color: card.textColor,
+                  ...(card.color === '#F0B90B' && styles.goldHover)
+                }}
+                onMouseOver={e => {
+                  if (card.color === '#F0B90B') e.target.style.filter = 'brightness(1.3) drop-shadow(0 0 6px gold)';
+                }}
+                onMouseOut={e => {
+                  if (card.color === '#F0B90B') e.target.style.filter = 'none';
+                }}
               >
                 {t.joinNow}
               </a>
@@ -178,6 +189,7 @@ const styles = {
   title: {
     fontSize: '22px',
     marginBottom: '40px',
+    textShadow: '0 0 6px rgba(255,255,255,0.3)'
   },
   cardContainer: {
     display: 'flex',
@@ -196,7 +208,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
     transition: 'transform 0.2s ease',
   },
   logoImg: {
@@ -216,6 +228,10 @@ const styles = {
     fontWeight: 'bold',
     textDecoration: 'none',
     transition: 'opacity 0.3s ease',
+    cursor: 'pointer',
+  },
+  goldHover: {
+    transition: 'all 0.3s ease',
   },
   footer: {
     textAlign: 'center',
