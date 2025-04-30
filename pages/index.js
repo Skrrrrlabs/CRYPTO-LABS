@@ -92,7 +92,59 @@ export default function Home() {
   );
 }
 
-// 이하 TEXT_KO, TEXT_EN, referralCards는 그대로
+const TEXT_KO = {
+  metaTitle: 'SKRRRR X CRYPTO LABS 공식 레퍼럴',
+  metaDescription: 'SKRRRR X CRYPTO LABS 레퍼럴 페이지',
+  home: '홈',
+  contact: '문의하기',
+  mainTitle: '🚀 SKRRRR X CRYPTO LABS 공식 레퍼럴 🚀',
+  joinNow: '가입하기',
+};
+
+const TEXT_EN = {
+  metaTitle: 'SKRRRR X CRYPTO LABS Official Referral',
+  metaDescription: 'SKRRRR X CRYPTO LABS Global Referral Page',
+  home: 'Home',
+  contact: 'Contact',
+  mainTitle: '🚀 SKRRRR X CRYPTO LABS OFFICIAL REFERRAL 🚀',
+  joinNow: 'Join Now',
+};
+
+const referralCards = [
+  {
+    name: 'Binance',
+    img: '/binance.png',
+    desc: {
+      ko: '바이낸스 현물/선물 10% 수수료 할인!',
+      en: 'Binance Spot/Futures 10% Fee Discount!'
+    },
+    link: 'https://accounts.binance.com/register?ref=V5EBF1SH',
+    color: '#F0B90B',
+    textColor: '#000',
+  },
+  {
+    name: 'OKX',
+    img: '/okx.png',
+    desc: {
+      ko: 'OKX 평생 수수료 할인 + 20% 페이백!',
+      en: 'OKX Lifetime Fee Discount + 20% Payback!'
+    },
+    link: 'https://www.okx.com/join/SKRRRR',
+    color: '#000',
+    textColor: '#fff',
+  },
+  {
+    name: 'Bitget',
+    img: '/bitget.png',
+    desc: {
+      ko: '비트겟 평생 수수료 할인 + 20% 페이백!',
+      en: 'Bitget Lifetime Fee Discount + 20% Payback!'
+    },
+    link: 'https://partner.bitget.com/bg/5krrrr',
+    color: '#1c72c6',
+    textColor: '#fff',
+  },
+];
 
 const styles = {
   pageWrapper: {
