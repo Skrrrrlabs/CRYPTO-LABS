@@ -48,13 +48,13 @@ export default function Home() {
                   ...styles.button,
                   backgroundColor: card.color,
                   color: card.textColor,
-                  ...(card.color === '#F0B90B' && styles.goldHover)
+                  ...styles.goldHover
                 }}
                 onMouseOver={e => {
-                  if (card.color === '#F0B90B') e.target.style.filter = 'brightness(1.3) drop-shadow(0 0 6px gold)';
+                  e.target.style.filter = 'brightness(1.2) drop-shadow(0 0 6px gold)';
                 }}
                 onMouseOut={e => {
-                  if (card.color === '#F0B90B') e.target.style.filter = 'none';
+                  e.target.style.filter = 'none';
                 }}
               >
                 {t.joinNow}
