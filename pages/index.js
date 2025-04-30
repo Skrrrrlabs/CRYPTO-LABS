@@ -22,6 +22,13 @@ export default function Home() {
         <title>{t.metaTitle}</title>
         <meta name="description" content={t.metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* ✅ 링크 미리보기용 OG 태그 */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t.metaTitle} />
+        <meta property="og:description" content={t.metaDescription} />
+        <meta property="og:image" content="https://yourdomain.com/background.png" />
+        <meta property="og:url" content="https://yourdomain.com/" />
       </Head>
 
       <header style={styles.navbar}>
@@ -75,6 +82,8 @@ export default function Home() {
     </div>
   );
 }
+
+// 이하 기존 내용 동일 (TEXT_KO, TEXT_EN, referralCards, styles)
 
 const TEXT_KO = {
   metaTitle: 'SKRRRR X CRYPTO LABS 공식 레퍼럴',
