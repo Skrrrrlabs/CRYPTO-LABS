@@ -186,7 +186,7 @@ const styles = {
     gap: '30px',
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(255, 255, 255, 0.88)',
     color: '#000',
     borderRadius: '12px',
     padding: '20px',
@@ -224,4 +224,3 @@ const styles = {
     padding: '30px 10px 10px',
   },
 };
-
