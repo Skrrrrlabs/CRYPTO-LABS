@@ -28,18 +28,18 @@ export default function Home() {
   return (
     <div style={{ ...styles.pageWrapper }}>
       <Head>
-        <title>SKRRRR x CRYPTO LABS 공식 레퍼럴</title>
-        <meta name="description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
+        <title>CRYPTO LABS 파트너 거래소</title>
+        <meta name="description" content="CRYPTO LABS 파트너 거래소 페이지" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/skrrr_labs_favicon.ico" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="SKRRRR x CRYPTO LABS 공식 레퍼럴" />
-        <meta property="og:description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
+        <meta property="og:title" content="CRYPTO LABS 파트너 거래소" />
+        <meta property="og:description" content="CRYPTO LABS 파트너 거래소 페이지" />
         <meta property="og:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
         <meta property="og:url" content="https://crypto-labs-zeta.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SKRRRR x CRYPTO LABS 공식 레퍼럴" />
-        <meta name="twitter:description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
+        <meta name="twitter:title" content="CRYPTO LABS 파트너 거래소" />
+        <meta name="twitter:description" content="CRYPTO LABS 파트너 거래소 페이지" />
         <meta name="twitter:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
       </Head>
 
@@ -116,20 +116,20 @@ export default function Home() {
   );
 }
 const TEXT_KO = {
-  metaTitle: 'SKRRRR x CRYPTO LABS 공식 레퍼럴',
-  metaDescription: 'SKRRRR X CRYPTO LABS 레퍼럴 페이지',
+  metaTitle: 'CRYPTO LABS 파트너 거래소',
+  metaDescription: 'CRYPTO LABS 파트너 거래소 페이지',
   home: '홈',
   contact: '문의하기',
-  mainTitle: '🚀 SKRRRR x CRYPTO LABS 공식 레퍼럴 🚀',
+  mainTitle: '🚀 CRYPTO LABS 파트너 거래소 🚀',
   joinNow: '가입하기',
 };
 
 const TEXT_EN = {
-  metaTitle: 'SKRRRR x CRYPTO LABS Official Referral',
-  metaDescription: 'SKRRRR x CRYPTO LABS Global Referral Page',
+  metaTitle: 'CRYPTO LABS Official Referral',
+  metaDescription: 'CRYPTO LABS Global Referral Page',
   home: 'Home',
   contact: 'Contact',
-  mainTitle: '🚀 SKRRRR x CRYPTO LABS OFFICIAL REFERRAL 🚀',
+  mainTitle: '🚀 CRYPTO LABS OFFICIAL REFERRAL 🚀',
   joinNow: 'Join Now',
 };
 
