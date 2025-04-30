@@ -67,6 +67,9 @@ export default function Home() {
 
       <main style={styles.mainContent}>
         <h1 style={styles.title}>{t.mainTitle}</h1>
+        <p style={{ fontSize: '13px', color: '#ccc', marginTop: '-20px' }}>
+          Trading, Now Engineered by SKRRRR.
+        </p>
         <div style={styles.cardContainer}>
           {referralCards.map((card, index) => (
             <div key={index} style={styles.card}>
@@ -115,6 +118,7 @@ export default function Home() {
     </div>
   );
 }
+
 const TEXT_KO = {
   metaTitle: 'CRYPTO LABS 파트너 거래소',
   metaDescription: 'CRYPTO LABS 파트너 거래소 페이지',
@@ -285,3 +289,4 @@ const styles = {
     padding: '30px 10px 10px',
   },
 };
+
