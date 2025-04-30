@@ -119,7 +119,7 @@ const styles = {
     color: '#fff',
   },
   background: {
-    backgroundImage: 'url(/background.jpg)',
+    backgroundImage: 'url(/background.png)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     position: 'fixed',
