@@ -1,20 +1,29 @@
 // pages/index.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 export default function Home() {
   const [lang, setLang] = useState('ko');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkSize = () => setIsMobile(window.innerWidth <= 768);
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+
   const t = lang === 'ko' ? TEXT_KO : TEXT_EN;
+  const backgroundImage = isMobile ? '/background-mobile.png' : '/background.png';
 
   return (
-    <div style={styles.pageWrapper}>
+    <div style={{ ...styles.pageWrapper }}>
       <Head>
         <title>{t.metaTitle}</title>
         <meta name="description" content={t.metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      {/* 상단 내비게이션 */}
       <header style={styles.navbar}>
         <div style={styles.logo}>CRYPTO LABS</div>
         <nav style={styles.menu}>
@@ -24,7 +33,6 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* 메인 콘텐츠 */}
       <main style={styles.mainContent}>
         <h1 style={styles.title}>{t.mainTitle}</h1>
         <div style={styles.cardContainer}>
@@ -45,13 +53,14 @@ export default function Home() {
         </div>
       </main>
 
-      {/* 하단 푸터 */}
       <footer style={styles.footer}>
         © 2025 SKRRRR. All rights reserved.
       </footer>
 
-      {/* 배경 이미지 */}
-      <div style={styles.background} />
+      <div style={{
+        ...styles.background,
+        backgroundImage: `url(${backgroundImage})`
+      }} />
     </div>
   );
 }
@@ -119,7 +128,6 @@ const styles = {
     color: '#fff',
   },
   background: {
-    backgroundImage: 'url(/background.png)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     position: 'fixed',
