@@ -20,8 +20,8 @@ export default function Home() {
     <div style={{ ...styles.pageWrapper }}>
       <Head>
   {/* 기본 SEO */}
-  <title>SKRRRR X CRYPTO LABS 공식 레퍼럴</title>
-  <meta name="description" content="SKRRRR X CRYPTO LABS 레퍼럴 페이지" />
+  <title>SKRRRR x CRYPTO LABS 공식 레퍼럴</title>
+  <meta name="description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   {/* Favicon */}
@@ -29,15 +29,15 @@ export default function Home() {
 
   {/* Open Graph (카카오톡, 페이스북, 디스코드 등) */}
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="SKRRRR X CRYPTO LABS 공식 레퍼럴" />
-  <meta property="og:description" content="SKRRRR X CRYPTO LABS 레퍼럴 페이지" />
+  <meta property="og:title" content="SKRRRR x CRYPTO LABS 공식 레퍼럴" />
+  <meta property="og:description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
   <meta property="og:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
   <meta property="og:url" content="https://crypto-labs-zeta.vercel.app/" />
 
   {/* Twitter card (선택사항이지만 있으면 좋아!) */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SKRRRR X CRYPTO LABS 공식 레퍼럴" />
-  <meta name="twitter:description" content="SKRRRR X CRYPTO LABS 레퍼럴 페이지" />
+  <meta name="twitter:title" content="SKRRRR x CRYPTO LABS 공식 레퍼럴" />
+  <meta name="twitter:description" content="SKRRRR x CRYPTO LABS 레퍼럴 페이지" />
   <meta name="twitter:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
 </Head>
 
@@ -90,7 +90,7 @@ export default function Home() {
       </main>
 
       <footer style={styles.footer}>
-        © 2025 SKRRRR. All rights reserved.
+        © 2025 CRYTOLABS LEADER ALPHA. All rights reserved.
       </footer>
 
       <div style={{
@@ -102,20 +102,20 @@ export default function Home() {
 }
 
 const TEXT_KO = {
-  metaTitle: 'SKRRRR X CRYPTO LABS 공식 레퍼럴',
+  metaTitle: 'SKRRRR x CRYPTO LABS 공식 레퍼럴',
   metaDescription: 'SKRRRR X CRYPTO LABS 레퍼럴 페이지',
   home: '홈',
   contact: '문의하기',
-  mainTitle: '🚀 SKRRRR X CRYPTO LABS 공식 레퍼럴 🚀',
+  mainTitle: '🚀 SKRRRR x CRYPTO LABS 공식 레퍼럴 🚀',
   joinNow: '가입하기',
 };
 
 const TEXT_EN = {
-  metaTitle: 'SKRRRR X CRYPTO LABS Official Referral',
-  metaDescription: 'SKRRRR X CRYPTO LABS Global Referral Page',
+  metaTitle: 'SKRRRR x CRYPTO LABS Official Referral',
+  metaDescription: 'SKRRRR x CRYPTO LABS Global Referral Page',
   home: 'Home',
   contact: 'Contact',
-  mainTitle: '🚀 SKRRRR X CRYPTO LABS OFFICIAL REFERRAL 🚀',
+  mainTitle: '🚀 SKRRRR x CRYPTO LABS OFFICIAL REFERRAL 🚀',
   joinNow: 'Join Now',
 };
 
