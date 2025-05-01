@@ -14,6 +14,11 @@
       "source": "/bitget",
       "destination": "https://partner.bitget.com/bg/5krrrr",
       "permanent": true
+    },
+    {
+      "source": "/refchange",
+      "destination": "https://www.notion.so/1c1c3047f8138002aed3cb0946d64347",
+      "permanent": true
     }
   ],
   "rewrites": [
