@@ -57,13 +57,14 @@ export default function Home() {
       <header style={styles.navbar}>
         <div style={styles.logo}>CRYPTO LABS</div>
         <nav style={styles.menu}>
-          <a href="#" style={styles.menuLink}>{t.home}</a>
-          <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={styles.menuLink}>{t.contact}</a>
-          <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} style={styles.langToggle}>
-            {lang === 'ko' ? 'EN' : 'KR'}
-          </button>
-        </nav>
-      </header>
+  <a href="#" style={styles.menuLink}>{t.home}</a>
+  <a href="/refchange" style={styles.menuLink}>🔁 레퍼럴 변경</a>
+  <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={styles.menuLink}>{t.contact}</a>
+  <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} style={styles.langToggle}>
+    {lang === 'ko' ? 'EN' : 'KR'}
+  </button>
+</nav>
+
 
       <main style={styles.mainContent}>
         <h1 style={styles.title}>{t.mainTitle}</h1>
