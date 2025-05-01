@@ -176,9 +176,6 @@ const referralCards = [
   },
 ];
 
-const styles = { /* 생략: 기존 스타일 유지 */ };
-
-
 const styles = {
   pageWrapper: {
     position: 'relative',
