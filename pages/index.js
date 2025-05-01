@@ -28,18 +28,18 @@ export default function Home() {
   return (
     <div style={{ ...styles.pageWrapper }}>
       <Head>
-        <title>CRYPTO LABS 파트너 거래소</title>
-        <meta name="description" content="CRYPTO LABS 파트너 거래소 페이지" />
+        <title>{t.metaTitle}</title>
+        <meta name="description" content={t.metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/skrrr_labs_favicon.ico" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="CRYPTO LABS 파트너 거래소" />
-        <meta property="og:description" content="CRYPTO LABS 파트너 거래소 페이지" />
+        <meta property="og:title" content={t.metaTitle} />
+        <meta property="og:description" content={t.metaDescription} />
         <meta property="og:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
         <meta property="og:url" content="https://crypto-labs-zeta.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="CRYPTO LABS 파트너 거래소" />
-        <meta name="twitter:description" content="CRYPTO LABS 파트너 거래소 페이지" />
+        <meta name="twitter:title" content={t.metaTitle} />
+        <meta name="twitter:description" content={t.metaDescription} />
         <meta name="twitter:image" content="https://crypto-labs-zeta.vercel.app/og-thumbnail.jpg" />
       </Head>
 
@@ -57,14 +57,14 @@ export default function Home() {
       <header style={styles.navbar}>
         <div style={styles.logo}>CRYPTO LABS</div>
         <nav style={styles.menu}>
-  <a href="#" style={styles.menuLink}>{t.home}</a>
-  <a href="/refchange" style={styles.menuLink}>🔁 레퍼럴 변경</a>
-  <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={styles.menuLink}>{t.contact}</a>
-  <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} style={styles.langToggle}>
-    {lang === 'ko' ? 'EN' : 'KR'}
-  </button>
-</nav>
-
+          <a href="#" style={styles.menuLink}>{t.home}</a>
+          <a href="/refchange" style={styles.menuLink}>🔁 {t.refchange}</a>
+          <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={styles.menuLink}>{t.contact}</a>
+          <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} style={styles.langToggle}>
+            {lang === 'ko' ? 'EN' : 'KR'}
+          </button>
+        </nav>
+      </header>
 
       <main style={styles.mainContent}>
         <h1 style={styles.title}>{t.mainTitle}</h1>
@@ -124,6 +124,7 @@ const TEXT_KO = {
   metaTitle: 'CRYPTO LABS 파트너 거래소',
   metaDescription: 'CRYPTO LABS 파트너 거래소 페이지',
   home: '홈',
+  refchange: '레퍼럴 변경',
   contact: '문의하기',
   mainTitle: '🚀 CRYPTO LABS 파트너 거래소 🚀',
   joinNow: '가입하기',
@@ -133,6 +134,7 @@ const TEXT_EN = {
   metaTitle: 'CRYPTO LABS Official Referral',
   metaDescription: 'CRYPTO LABS Global Referral Page',
   home: 'Home',
+  refchange: 'Referral Change',
   contact: 'Contact',
   mainTitle: '🚀 CRYPTO LABS OFFICIAL REFERRAL 🚀',
   joinNow: 'Join Now',
@@ -173,6 +175,9 @@ const referralCards = [
     textColor: '#fff',
   },
 ];
+
+const styles = { /* 생략: 기존 스타일 유지 */ };
+
 
 const styles = {
   pageWrapper: {
