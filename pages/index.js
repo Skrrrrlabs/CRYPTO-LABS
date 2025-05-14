@@ -58,6 +58,7 @@ export default function Home() {
         <div style={styles.logo}>CRYPTO LABS</div>
         <nav style={styles.menu}>
           <a href="#" style={styles.menuLink}>{t.home}</a>
+          <a href="/event" style={styles.menuLink}>🎉 {t.event}</a>
           <a href="/refchange" style={styles.menuLink}>🔁 {t.refchange}</a>
           <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={styles.menuLink}>{t.contact}</a>
           <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} style={styles.langToggle}>
@@ -125,6 +126,7 @@ const TEXT_KO = {
   metaDescription: 'CRYPTO LABS 파트너 거래소 페이지',
   home: '홈',
   refchange: '레퍼럴 변경',
+  event: '이벤트', // 👈 추가!
   contact: '문의하기',
   mainTitle: '🚀 CRYPTO LABS 파트너 거래소 🚀',
   joinNow: '가입하기',
@@ -135,6 +137,7 @@ const TEXT_EN = {
   metaDescription: 'CRYPTO LABS Global Referral Page',
   home: 'Home',
   refchange: 'Referral Change',
+  event: 'Event', // 👈 추가!
   contact: 'Contact',
   mainTitle: '🚀 CRYPTO LABS OFFICIAL REFERRAL 🚀',
   joinNow: 'Join Now',
