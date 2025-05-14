@@ -19,6 +19,11 @@
       "source": "/refchange",
       "destination": "https://www.notion.so/1c1c3047f8138002aed3cb0946d64347",
       "permanent": true
+    },
+    {
+      "source": "/event",
+      "destination": "https://www.notion.so/C-E-X-Event-1f3c3047f8138072b5b7c85a287dd6ca",
+      "permanent": true
     }
   ],
   "rewrites": [
