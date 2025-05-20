@@ -26,7 +26,7 @@
       "permanent": true
     }
     {
-      "source": "/type?",
+      "source": "/type",
       "destination": "https://www.notion.so/Type-0-5-Skill-Description-1f8c3047f813802aa022d8fb77c5954a?pvs=4",
       "permanent": true
     }
