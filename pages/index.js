@@ -86,12 +86,15 @@ export default function Home() {
                   backgroundColor: card.color,
                   color: card.textColor,
                   ...(card.name === 'Binance' ? styles.goldHover : {}),
+                  ...(card.name === 'Bybit' ? styles.bybitHover : {}),  // ✅ BYBIT
                   ...(card.name === 'OKX' ? styles.okxHover : {}),
                   ...(card.name === 'Bitget' ? styles.bitgetHover : {})
                 }}
                 onMouseOver={e => {
                   if (card.name === 'Binance') {
                     e.target.style.filter = 'brightness(1.2) drop-shadow(0 0 6px gold)';
+                  } else if (card.name === 'Bybit') { // ✅ BYBIT
+                    e.target.style.filter = 'brightness(1.18) drop-shadow(0 0 5px #F6C800)';
                   } else if (card.name === 'OKX') {
                     e.target.style.filter = 'brightness(1.15) drop-shadow(0 0 4px black)';
                   } else if (card.name === 'Bitget') {
@@ -126,7 +129,7 @@ const TEXT_KO = {
   metaDescription: 'CRYPTO LABS 파트너 거래소 페이지',
   home: '홈',
   refchange: '레퍼럴 변경',
-  event: '이벤트', // 👈 추가!
+  event: '이벤트',
   contact: '문의하기',
   mainTitle: '🚀 CRYPTO LABS 파트너 거래소 🚀',
   joinNow: '가입하기',
@@ -137,7 +140,7 @@ const TEXT_EN = {
   metaDescription: 'CRYPTO LABS Global Referral Page',
   home: 'Home',
   refchange: 'Referral Change',
-  event: 'Event', // 👈 추가!
+  event: 'Event',
   contact: 'Contact',
   mainTitle: '🚀 CRYPTO LABS OFFICIAL REFERRAL 🚀',
   joinNow: 'Join Now',
@@ -153,6 +156,18 @@ const referralCards = [
     },
     link: 'https://accounts.binance.com/register?ref=V5EBF1SH',
     color: '#F0B90B',
+    textColor: '#000',
+  },
+  // ✅ BYBIT: Binance 다음, OKX 이전에 배치
+  {
+    name: 'Bybit',
+    img: '/bybit.png', // /public/bybit.png 준비!
+    desc: {
+      ko: '바이비트 평생 수수료 할인 + 20% 페이백!',
+      en: 'Bybit Lifetime Fee Discount + 20% Payback!'
+    },
+    link: 'https://partner.bybit.com/b/skrrrr', // ← 오빠 제휴 링크로 교체
+    color: '#F6C800',
     textColor: '#000',
   },
   {
@@ -280,15 +295,10 @@ const styles = {
     transition: 'opacity 0.3s ease',
     cursor: 'pointer',
   },
-  goldHover: {
-    transition: 'all 0.3s ease',
-  },
-  okxHover: {
-    transition: 'all 0.3s ease',
-  },
-  bitgetHover: {
-    transition: 'all 0.3s ease',
-  },
+  goldHover: { transition: 'all 0.3s ease' },
+  bybitHover: { transition: 'all 0.3s ease' }, // ✅ BYBIT
+  okxHover: { transition: 'all 0.3s ease' },
+  bitgetHover: { transition: 'all 0.3s ease' },
   footer: {
     textAlign: 'center',
     fontSize: '12px',
@@ -296,4 +306,3 @@ const styles = {
     padding: '30px 10px 10px',
   },
 };
-
