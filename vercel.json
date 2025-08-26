@@ -6,8 +6,8 @@
       "permanent": true
     },
     {
-      "source": "/bybit",   // ✅ Bybit 추가
-      "destination": "https://partner.bybit.com/b/skrrrr",  // ⬅ 오빠 제휴 링크로 교체
+      "source": "/bybit",
+      "destination": "https://partner.bybit.com/b/skrrrr",
       "permanent": true
     },
     {
