@@ -60,7 +60,7 @@ export default function Home() {
           <a href="#" style={styles.menuLink}>{t.home}</a>
           <a href="/event" style={styles.menuLink}>🎉 {t.event}</a>
           <a href="/refchange" style={styles.menuLink}>🔁 {t.refchange}</a>
-          <a href="https://t.me/masterlabs1O1" target="_blank" rel="noopener noreferrer" style={styles.menuLink}>{t.contact}</a>
+          <a href="https://t.me/skrrrrlabs" target="_blank" rel="noopener noreferrer" style={styles.menuLink}>{t.contact}</a>
           <button onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')} style={styles.langToggle}>
             {lang === 'ko' ? 'EN' : 'KR'}
           </button>
